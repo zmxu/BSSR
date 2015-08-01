@@ -1,0 +1,44 @@
+function [ dst ] = toNewPosition( src, R, m, n )
+%TONEWPOSITION 此处显示有关此函数的摘要
+%   原经纬图坐标在新经纬图中的位置
+X = src(1,:);
+Y = src(2,:);
+R = R/norm(R);
+
+long = 2*pi/(n-1).*X - pi;
+lati = pi/2 - pi/(m-1).*Y;
+
+U = cos(long).*cos(lati);
+V = sin(long).*cos(lati);
+W = sin(lati);
+
+U_new = R(1,1).*U + R(1,2).*V + R(1,3).*W;
+V_new = R(2,1).*U + R(2,2).*V + R(2,3).*W;
+W_new = R(3,1).*U + R(3,2).*V + R(3,3).*W;
+
+lati_new = asin(W_new);
+long_sin = asin(V_new ./ cos(lati_new));
+long_cos = acos(U_new ./ cos(lati_new));
+
+long_new = zeros(size(lati_new));
+
+key_1 = find(long_sin >= 0 & long_cos < pi/2);
+long_new(key_1) = long_sin(key_1);
+key_2 = find(long_sin >= 0 & long_cos >= pi/2);
+long_new(key_2) = long_cos(key_2);
+key_3 = find(long_sin < 0 & long_cos < pi/2);
+long_new(key_3) = long_sin(key_3);
+key_4 = find(long_sin < 0 & long_cos >= pi/2);
+long_new(key_4) = -long_cos(key_4);
+long_new = real(long_new);
+
+clear U_new V_new W_new X Y;
+
+% 
+X_new = single((long_new + pi) .* (n-1)/(2*pi));
+Y_new = single((pi/2 - lati_new) .* (m-1)/pi);
+
+dst = [X_new; Y_new];
+
+end
+
