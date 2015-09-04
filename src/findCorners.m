@@ -29,7 +29,7 @@ for i = activeImg
     %input('hello','s');
     pause;
     close;
-    if(size(cleft, 1) == 77 && size(cright, 1) == 77 && flag == 0)
+    if(size(cleft, 1) == 48 && size(cright, 1) == 48 && flag == 0)
         cornersLeft_ = [cornersLeft_; cleft];
         cornersRight_ = [cornersRight_; cright];
         active = [active i];

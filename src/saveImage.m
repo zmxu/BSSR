@@ -1,4 +1,4 @@
-function [ ] = Final_saveImage_v2( leftImg, rightImg, readType, theta, origPair, linePair, lrImg, gap)
+function [ ] = saveImage( leftImg, rightImg, readType, theta, origPair, linePair, lrImg, gap)
 %FINAL_SAVEIMAGE 此处显示有关此函数的摘要
 %   leftImg, rightImg为左右图的位置加上base name，考虑到输入名常为 'L (1).jpg'，
 %   此时需要输入 '...\L ('
@@ -25,11 +25,11 @@ for i = theta.number
             theta.R_rect.leftAver, theta.R_rect.rightAver );
         
         if(origPair)
-            imwrite(uint8(pair), ['origPair\pair_', num2str(i), writeType]);
+            imwrite(uint8(pair), ['..\output\orig_pair\pair_', num2str(i), writeType]);
         end
         if(lrImg)
-            imwrite(uint8(dst_l), ['L&R\L_', num2str(i), writeType]);
-            imwrite(uint8(dst_r), ['L&R\R_', num2str(i), writeType]);
+            imwrite(uint8(dst_l), ['..\output\L_and_R\L_', num2str(i), writeType]);
+            imwrite(uint8(dst_r), ['..\output\L_and_R\R_', num2str(i), writeType]);
         end
         if(linePair)
 %             pairRGB = uint8(zeros([size(pair),3]));
@@ -37,7 +37,7 @@ for i = theta.number
 %                 pairRGB(:,:,kk) = pair;
 %             end
             pair = colorLine(pair, gap);
-            imwrite(uint8(pair), ['linePair\linePair_', num2str(i), writeType]);
+            imwrite(uint8(pair), ['..\output\line_pair\linePair_', num2str(i), writeType]);
         end
         if(origTheta)
             Lorig = imread(fl);

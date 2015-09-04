@@ -1,4 +1,4 @@
-function [ theta ] = Final_calcMatrix_v2( leftCorners, rightCorners, picRow, picCol, width, high, epsi, fromRT, useImg, number)
+function [ theta ] = calcMatrix( leftCorners, rightCorners, picRow, picCol, width, high, epsi, fromRT, useImg, number)
 %FINAL_VER1 此处显示有关此函数的摘要
 %   txtFile_l：检测到左角点信息
 %   txtFile_r：检测到右角点信息
@@ -29,7 +29,7 @@ theta.wp = createWP( width, high );
 [ theta.eachR.right, theta.eachT.right, theta.eachDelta.right ] = calcSelfRT( theta.uvw.right, theta.wp);
 
 % TODO：delta > epsi的记录并排除 theta.active
-[ theta.active, theta.useImg ] = activeImage_v2( theta.eachDelta, epsi, theta.useImg );
+[ theta.active, theta.useImg ] = active_image( theta.eachDelta, epsi, theta.useImg );
 
 if(~fromRT)
     [theta.R, theta.T, theta.R_rect.left, theta.R_rect.right] =...

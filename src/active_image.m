@@ -1,4 +1,4 @@
-function [ active, useImg ] = activeImage_v2( delta, epsi, useImg )
+function [ active, useImg ] = active_image( delta, epsi, useImg )
 %ACTIVEIMAGE 此处显示有关此函数的摘要
 %   此处显示详细说明
 n = size(delta.left, 2);
