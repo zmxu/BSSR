@@ -3,6 +3,9 @@ function [  ] = rotateThetaImage( fr_, fw_, readType, writeType, number)
 % eg: fr_ = 'D:\ThetaPic\Theta_150104_bigAngle_copy\RR\R (';
 %       fw_ = 'rotateRight\R (';
 % rotateThetaImage( fr_, fw_, '.jpg', '.jpg', 1:27)
+
+%   author: hgaolbb
+
 for i = number
     fr = [fr_,sprintf('R (%d)', i), readType];
     fw = [fw_,sprintf('R (%d)', i), writeType];

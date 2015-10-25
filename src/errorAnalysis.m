@@ -1,6 +1,8 @@
 function [ theta ] = errorAnalysis( theta,  errorEpsi)
 %ERRORANALYSIS 此处显示有关此函数的摘要
 %   此处显示详细说明
+
+%   author: hgaolbb
 theta.errorAnalysis.error = theta.Corners.left_rotate(1,:) - theta.Corners.right_rotate(1,:);
 key = find(abs(theta.errorAnalysis.error) > errorEpsi);
 line1 = ceil(key./theta.n);

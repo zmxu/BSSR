@@ -1,1 +1,1 @@
-Binocular-Spherical-Stereo algorithm
+Fish Eye Binocular Spherical Stereo algorithm

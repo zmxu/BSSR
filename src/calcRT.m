@@ -1,6 +1,8 @@
 function [R, T, R_rect_l, R_rect_r] = calcRT(Rl, Rr, Tl, Tr, active)
 %   fromRT~=0从RT开始改，否则从R_rect开始改
 
+%   author: hgaolbb
+
 R = zeros(size(Rl));
 R_rect_l = zeros(size(Rl));
 R_rect_r = zeros(size(Rl));

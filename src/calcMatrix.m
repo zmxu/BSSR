@@ -5,8 +5,10 @@ function [ theta ] = calcMatrix( leftCorners, rightCorners, picRow, picCol, widt
 %   picRow,picCol：输入图像的row&col，eg：1792, 3584
 %   width,high：x方向&y方向角点个数
 %   epsi:根据计算各自的误差，大于epsi的图片不参与后续R，T的计算
+%   fromRT = 0; %如果非零代表从RT开始就优化
 
-% fromRT = 0; %如果非零代表从RT开始就优化
+%   author: hgaolbb
+
 theta.useImg = useImg;
 theta.row = picRow;
 theta.col = picCol;

@@ -2,6 +2,8 @@ function [  ] = drawOnPair( file, number, theta )
 %UNTITLED 此处显示有关此函数的摘要
 %   此处显示详细说明
 
+%   author: hgaolbb
+
 for i = number
     cur = theta.useImg(i);
     fl = [file, 'L_', num2str(cur), '.jpg'];

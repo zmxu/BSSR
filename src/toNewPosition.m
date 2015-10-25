@@ -1,6 +1,9 @@
 function [ dst ] = toNewPosition( src, R, m, n )
 %TONEWPOSITION 此处显示有关此函数的摘要
 %   原经纬图坐标在新经纬图中的位置
+
+%   author: hgaolbb
+
 X = src(1,:);
 Y = src(2,:);
 R = R/norm(R);

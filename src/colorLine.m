@@ -1,5 +1,7 @@
 function [src] = colorLine(src, gap)
 
+%   author: hgaolbb
+
 color = zeros([3,5]);
 color(:,1) = [255;0;0]; % ºì
 color(:,2) = [255;255;0];   %»Æ

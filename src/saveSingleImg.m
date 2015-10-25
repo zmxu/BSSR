@@ -1,6 +1,9 @@
 function [  ] = saveSingleImg( fl, fr, theta, origPair, lrImg, linePair, gap )
 %SAVESINGLEIMG 此处显示有关此函数的摘要
 %   此处显示详细说明
+
+%   author: hgaolbb
+
 writeType = '.jpg'; 
 left = uint8(imread(fl));
 right = uint8(imread(fr));

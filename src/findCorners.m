@@ -3,6 +3,9 @@ function [cornersLeft_, cornersRight_, active] = findCorners(fl_, fr_, activeImg
 % clear all;
 % fl_ = 'D:\ThetaPic\2015_01_13_copy\LL\';
 % fr_ = 'D:\ThetaPic\2015_01_13_copy\RR\';
+
+%   author: hgaolbb
+
 cornersLeft_ = [];
 cornersRight_ = [];
 active = [];

@@ -1,4 +1,4 @@
-
+% author: hgaolbb
 % 以下用于验证误差，利用OpenCV检测角点
 % ns的意思是no_sub，即没用findSubCorners
 % 读入txt点坐标，并保存,[x;y]

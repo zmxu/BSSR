@@ -10,6 +10,9 @@ function [ ] = saveImage( leftImg, rightImg, readType, theta, origPair, linePair
 %
 %   划线间隔为gap，直接函数里设置
 %   如果需要些相应的文件，需要首先在当前目录准备文件夹 origPair, linePair, L&R
+
+%   author: hgaolbb
+
 origTheta = 0;
 fl_ = leftImg;
 fr_ = rightImg;

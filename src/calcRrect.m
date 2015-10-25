@@ -1,6 +1,8 @@
 function [R, T, R_rect_l, R_rect_r, oml, omr] = calcRrect(Rl, Rr, Tl, Tr, active)
 %   fromRT~=0从RT开始改，否则从R_rect开始改
 
+%   author: hgaolbb
+
 R = zeros(size(Rl));
 T = zeros(size(Tl));
 T_list = [];

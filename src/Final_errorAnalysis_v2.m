@@ -4,6 +4,9 @@ function [ theta ] = Final_errorAnalysis_v2( fl_, fr_, theta )
 %   isFound是在处理后的图中哪几幅是有用的(可以找到角点，手动填写)，只作为提示一下用
 % theta.errorAnalysis.isFound = isFound;
 % [ theta.errorAnalysis.leftCorner, theta.errorAnalysis.rightCorner ] = readData( txtLeft, txtRight );
+
+%   author: hgaolbb
+
 [theta.errorAnalysis.leftCorner, theta.errorAnalysis.rightCorner, theta.errorAnalysis.active] = ...
     errorAnafindCorners(fl_, fr_, theta.active);
 theta.errorAnalysis.error = theta.errorAnalysis.leftCorner(1,:) - theta.errorAnalysis.rightCorner(1,:);

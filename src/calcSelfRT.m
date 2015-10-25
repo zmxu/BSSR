@@ -1,4 +1,7 @@
 function [ R, T, delta ] = calcSelfRT( uvw, wp)
+
+%   author: hgaolbb
+
 k = size(uvw, 3);
 R = zeros([3, 3, k]);
 T = zeros([3, 1, k]);

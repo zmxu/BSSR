@@ -2,6 +2,8 @@
 function [dst] = backProjectImg_v2(src, R)
 % R is rotate matrix
 
+%   author: hgaolbb
+
 R = R';
 
 R = R / norm(R);

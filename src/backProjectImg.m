@@ -2,6 +2,8 @@
 function [dst] = backProjectImg(filename, R)
 % R is rotate matrix
 
+%   author: hgaolbb
+
 %initialize
 % clear all;
 % src = imread('theta/2_left.jpg');

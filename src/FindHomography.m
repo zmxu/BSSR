@@ -1,6 +1,7 @@
 
 function [R, T, delta] = FindHomography(uvw_1, wp)
 % load('uvw&wp.mat');
+
 sphere_pts_set = uvw_1;
 model_pts_set = wp;
 
